@@ -5,11 +5,10 @@ This repository contains a collection of Bash scripts and configuration files fo
 ## Project Structure
 
 ```
-├── cline.gbnf                # Grammar file for GPT-OSS-20b
+├── grammar/                  # Directory for grammar files
 ├── install_llama_dual.sh     # Script to build and install Llama for AMD and NVIDIA
 ├── list_llama_processes.sh   # Script to list running Llama processes with resource usage
 ├── llama_restart.log         # Log file for restart events
-├── no-channels.gbnf          # Grammar file for no-channels mode
 ├── restart_llama.sh          # Script to restart Llama servers
 ├── start_llama.sh            # Script to start Llama servers
 ├── stop_llama.sh             # Script to stop Llama servers
@@ -27,10 +26,6 @@ This repository contains a collection of Bash scripts and configuration files fo
 
 ### Monitoring
 - **list_llama_processes.sh**: Lists running Llama processes with detailed resource usage (CPU, memory, GPU). Includes color-coded output for high resource usage.
-
-### Grammar Files
-- **cline.gbnf**: Grammar file for GPT-OSS-20b.
-- **no-channels.gbnf**: Grammar file for no-channels mode.
 
 ## Usage
 
