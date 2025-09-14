@@ -1,1 +1,4 @@
 *.log
+# Ignore all .env files except sample ones
+*.env
+!*.sample.env

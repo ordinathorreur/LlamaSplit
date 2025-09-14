@@ -1,31 +1,34 @@
 #!/usr/bin/env bash
 
+# Load configuration
+source ./llama_config.env
+
 #### VULKAN version
 
 ## gpt-oss-20b on Vulkan
 # GGML_VULKAN_DEVICE=0 llama-amd \
-#   -m ~/.lmstudio/models/lmstudio-community/gpt-oss-20b-GGUF/gpt-oss-20b-MXFP4.gguf \
+#   -m "$VULKAN_MODEL_PATH" \
 #   -fa on \
-#   -c 128000 \
-#   --host 172.17.0.1 \
-#   --port 8081 \
-#   --grammar-file ./grammar/cline.gbnf &
+#   -c "$VULKAN_CONTEXT" \
+#   --host "$VULKAN_HOST" \
+#   --port "$VULKAN_PORT" \
+#   --grammar-file "$VULKAN_GRAMMAR_FILE" &
 
 # CUDA version
 
 ## devstral:20b on CUDA
 CUDA_VISIBLE_DEVICES=0 llama-nvidia \
- -m ~/.lmstudio/models/lmstudio-community/Devstral-Small-2507-GGUF/Devstral-Small-2507-Q4_K_M.gguf \
+ -m "$CUDA_MODEL_PATH" \
  -fa on \
- -c 32000 \
- --host 0.0.0.0 \
- --port 8082 &
+ -c "$CUDA_CONTEXT" \
+ --host "$CUDA_HOST" \
+ --port "$CUDA_PORT" &
 
 ## gpt-oss-20b on CUDA
 # CUDA_VISIBLE_DEVICES=0 llama-nvidia \
-#   -m ~/.lmstudio/models/lmstudio-community/gpt-oss-20b-GGUF/gpt-oss-20b-MXFP4.gguf \
-#   --grammar-file ./grammar/cline.gbnf \
-#   --host 0.0.0.0 \
-#   --port 8082 \
-#   -c 128000 \
+#   -m "$CUDA_MODEL_PATH" \
+#   --grammar-file "$CUDA_GRAMMAR_FILE" \
+#   --host "$CUDA_HOST" \
+#   --port "$CUDA_PORT" \
+#   -c "$CUDA_CONTEXT" \
 #   --flash-attn on &
