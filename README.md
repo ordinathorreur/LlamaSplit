@@ -78,27 +78,7 @@ The installation script installs the required dependencies, including:
 
 ### Configuration
 
-Before starting the servers, configure the model paths, ports, and other settings in the `llama_config.sample.env` file. Copy this file to `llama_config.env` and update the values as needed. Here is an example:
-
-```bash
-# Vulkan configuration
-VULKAN_DEVICE=0
-VULKAN_MODEL_PATH=/path/to/vulkan/model/file.gguf
-VULKAN_GRAMMAR_FILE=/path/to/vulkan/grammar/file.gbnf
-VULKAN_HOST=127.0.0.1
-VULKAN_PORT=8081
-VULKAN_CONTEXT=128000
-
-# CUDA configuration
-CUDA_VISIBLE_DEVICES=0
-CUDA_MODEL_PATH=/path/to/cuda/model/file.gguf
-CUDA_GRAMMAR_FILE=/path/to/cuda/grammar/file.gbnf
-CUDA_HOST=127.0.0.1
-CUDA_PORT=8082
-CUDA_CONTEXT=32000
-```
-
-Update these values to match your setup.
+Before starting the servers, copy the `llama_config.sample.env` file to `llama_config.env` and update the values as needed.
 
 ## License
 This project is licensed under the MIT License.
