@@ -9,7 +9,7 @@
 #   -c 128000 \
 #   --host 172.17.0.1 \
 #   --port 8081 \
-#   --grammar-file cline.gbnf &
+#   --grammar-file ./grammar/cline.gbnf &
 
 # CUDA version
 
@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=0 llama-nvidia \
 ## gpt-oss-20b on CUDA
 # CUDA_VISIBLE_DEVICES=0 llama-nvidia \
 #   -m ~/.lmstudio/models/lmstudio-community/gpt-oss-20b-GGUF/gpt-oss-20b-MXFP4.gguf \
-#   --grammar-file cline.gbnf \
+#   --grammar-file ./grammar/cline.gbnf \
 #   --host 0.0.0.0 \
 #   --port 8082 \
 #   -c 128000 \
